@@ -1,0 +1,40 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Holiday Search</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+  </head>
+  <body class=".container">
+  	<form>
+
+  		<p>Select Country</p>
+  		<select name="country" class="form-control">
+  			<% ["United States", "Great Britian", "Belgium", "Brazil"].each do |country| %>
+  				<option <% if params['country'] == country %> <%= selected="selected" %> <% end %> value="<%= country %>">
+  					<%= country %>
+  				</option>
+  			<% end %>
+		</select>
+		<p>Enter month</p>
+  		<input name="month" type="month" value="<%= params['month'] %>">
+	  <button type="submit">Search</button>
+	</form>
+	<% if @holidays.any? %>
+		<h2>Holidays</h2>
+	  	<ol>
+	  		<% @holidays.each do |holiday| %>
+	  			<% holiday.each do |h| %>
+	  				<li>
+	  					<%= h["name"] %>
+	  				</li>
+	  			<% end %>
+	  		<% end %>
+	  	</ol>
+	  </div>
+
+	<% else %>
+	<% end %>
+  </body>
+</html>
