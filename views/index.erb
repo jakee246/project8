@@ -11,7 +11,7 @@
 
   		<p>Select Country</p>
   		<select name="country" class="form-control">
-  			<% ["United States", "Great Britian", "Belgium", "Brazil"].each do |country| %>
+  			<% ["us", "gb", "be", "br"].each do |country| %>
   				<option <% if params['country'] == country %> <%= selected="selected" %> <% end %> value="<%= country %>">
   					<%= country %>
   				</option>
