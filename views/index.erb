@@ -9,20 +9,19 @@
   <body class=".container">
   	<form>
 
-  		<p>Select Country</p>
+  		<p>Select Country: United States, Great Britin, or Canada</p>
   		<select name="country" class="form-control">
-  			<% ["us", "gb", "be", "br"].each do |country| %>
+  			<% ["us", "gb", "ca"].each do |country| %>
   				<option <% if params['country'] == country %> <%= selected="selected" %> <% end %> value="<%= country %>">
   					<%= country %>
   				</option>
   			<% end %>
 		</select>
-		<p>Enter month</p>
+		<p>Enter month (ie. March)</p>
   		<input name="month" type="month" value="<%= params['month'] %>">
 	  <button type="submit">Search</button>
 	</form>
 	<% if @holidays.any? %>
-		<h2>Holidays</h2>
 	  	<ol>
 	  		<% @holidays.each do |holiday| %>
 	  			<% holiday.each do |h| %>
