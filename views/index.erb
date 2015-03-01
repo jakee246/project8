@@ -9,9 +9,9 @@
   <body class=".container">
   	<form>
 
-  		<p>Select Country: United States, Great Britin, or Canada</p>
+  		<p>Select Country: United States or Great Britin</p>
   		<select name="country" class="form-control">
-  			<% ["us", "gb", "ca"].each do |country| %>
+  			<% ["us", "gb"].each do |country| %>
   				<option <% if params['country'] == country %> <%= selected="selected" %> <% end %> value="<%= country %>">
   					<%= country %>
   				</option>
