@@ -16,14 +16,14 @@
   					<%= country %>
   				</option>
   			<% end %>
-		</select>
-		<p>Enter month (ie. March)</p>
+		  </select>
+		  <p>Enter month (ie. March)</p>
   		<input name="month" type="month" value="<%= params['month'] %>">
   		<p> Year?</p>
 
       <input name="year" type="year" value="<%= params['year'] %>">
     
-	  <button type="submit">Search</button>
+	    <button type="submit">Search</button>
 	</form>
 	<% if @holidays.any? %>
 	  	<ol>
