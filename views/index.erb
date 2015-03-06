@@ -1,20 +1,20 @@
 <!doctype html>
 <html>
   <head>
-    <title>Holiday Search</title>
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+      <title>Holiday Search</title>
+      <link rel="stylesheet" href="css/style.css">
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
   </head>
   <body class=".container">
-  	<form>
+  	 <form>
 
   		<p>Select Country: United States or Great Britin</p>
   		<select name="country" class="form-control">
   			<% ["us", "gb"].each do |country| %>
-  				<option <% if params['country'] == country %> <%= selected="selected" %> <% end %> value="<%= country %>">
+  			 <option <% if params['country'] == country %> <%= selected="selected" %> <% end %> value="<%= country %>">
   					<%= country %>
-  				</option>
+  			 </option>
   			<% end %>
 		  </select>
 		  <p>Enter month (ie. March)</p>
